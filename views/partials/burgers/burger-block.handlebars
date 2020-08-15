@@ -1,0 +1,9 @@
+<div class="burger-style">
+	<div class="title">
+	{{burger_name}}
+	</div>
+	<button class="change-devour-status" data-id="{{id}}" data-devoured="{{devoured}}">
+		{{#if devoured}}Devour it!!!{{else}}Order Another!{{/if}}
+	</button>
+	<button class="delete" data-id="{{id}}">{{#if devoured}} Take it back!!! I found a hair! {{else}}All done! {{/if}}</button>
+</div>

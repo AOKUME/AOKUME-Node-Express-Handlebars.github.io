@@ -1,0 +1,37 @@
+<h1>Ham-Bur-Ger Express</h1>
+
+<span class="lefty">
+  <h2> Burgers Ready to Devour! </h2>
+
+  <div>
+    {{#each burgers}}
+    {{#unless devoured}}
+    {{> burgers/burger-block devoured=1}}
+    {{/unless}}
+    {{/each}}
+  </div>
+
+</span>
+
+<span class="righty">
+  <h2>Burgers you have Devoured!</h2>
+
+  <div>
+    {{#each burgers}}
+    {{#if devoured}}
+    {{> burgers/burger-block devoured=0}}
+    {{/if}}
+    {{/each}}
+  </div>
+</span>
+
+<span class="centery">
+  <h2>Order a new burger </h2>
+  <form class="create-form">
+    <div class="form-group">
+      <label for="bur-ger">Your new burger:</label>
+      <input type="text" id="bur-ger" name="name">
+    </div>
+    <button type="submit">Add a burger</button>
+  </form>
+</span>
